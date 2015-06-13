@@ -4,3 +4,165 @@ Started GET "/" for ::1 at 2015-06-13 11:23:41 +0200
 Processing by Rails::WelcomeController#index as HTML
   Rendered /Library/Ruby/Gems/2.0.0/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (3.5ms)
 Completed 200 OK in 108ms (Views: 79.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-13 12:27:36 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Library/Ruby/Gems/2.0.0/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (3.8ms)
+Completed 200 OK in 116ms (Views: 86.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (1.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (2.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateLinks (20150613113707)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "links" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "url" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150613113707"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-13 13:39:13 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Library/Ruby/Gems/2.0.0/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (3.0ms)
+Completed 200 OK in 65ms (Views: 31.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/link" for 127.0.0.1 at 2015-06-13 13:39:17 +0200
+
+ActionController::RoutingError (No route matches [GET] "/link"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (26.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (109.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (30.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (78.8ms)
+
+
+Started GET "/links" for 127.0.0.1 at 2015-06-13 13:39:39 +0200
+Processing by LinksController#index as HTML
+  [1m[35mLink Load (0.2ms)[0m  SELECT "links".* FROM "links"
+  Rendered links/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 3717ms (Views: 3712.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/links.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-06-13 13:39:43 +0200
+
+
+Started GET "/assets/scaffolds.self-c204456728a6e25bbd1debe6f90df3022acc033f4fb4b58a0805d130332d1e9f.css?body=1" for 127.0.0.1 at 2015-06-13 13:39:43 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-06-13 13:39:43 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-06-13 13:39:43 +0200
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-06-13 13:39:43 +0200
+
+
+Started GET "/assets/links.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-06-13 13:39:43 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-06-13 13:39:43 +0200
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for 127.0.0.1 at 2015-06-13 13:39:43 +0200
+
+
+Started GET "/links/new" for 127.0.0.1 at 2015-06-13 13:39:46 +0200
+Processing by LinksController#new as HTML
+  Rendered links/_form.html.erb (38.8ms)
+  Rendered links/new.html.erb within layouts/application (41.9ms)
+Completed 200 OK in 82ms (Views: 75.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/links" for 127.0.0.1 at 2015-06-13 13:40:15 +0200
+Processing by LinksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uHtplM2xJ7ZEPRHHlAIjHlLdGPLOnQl/s5X5K01B+T7w4l02b/M6Rvh6fScd3qTdL5OsL9yX7uN5FVnLKGpYDA==", "link"=>{"title"=>"facebook", "url"=>"https://www.facebook.com/"}, "commit"=>"Create Link"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "links" ("title", "url", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "facebook"], ["url", "https://www.facebook.com/"], ["created_at", "2015-06-13 11:40:15.585234"], ["updated_at", "2015-06-13 11:40:15.585234"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/links/1
+Completed 302 Found in 27ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/links/1" for 127.0.0.1 at 2015-06-13 13:40:15 +0200
+Processing by LinksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLink Load (0.3ms)[0m  SELECT  "links".* FROM "links" WHERE "links"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered links/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 127ms (Views: 36.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/links" for 127.0.0.1 at 2015-06-13 13:40:51 +0200
+Processing by LinksController#index as HTML
+  [1m[36mLink Load (0.3ms)[0m  [1mSELECT "links".* FROM "links"[0m
+  Rendered links/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 46ms (Views: 45.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/links/new" for 127.0.0.1 at 2015-06-13 13:41:23 +0200
+Processing by LinksController#new as HTML
+  Rendered links/_form.html.erb (2.0ms)
+  Rendered links/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 33ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/links" for 127.0.0.1 at 2015-06-13 13:41:34 +0200
+Processing by LinksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yS+Lr8pWZ9ILvkxmCeW06tkOVFXAdCLLpZZ8e7tZz4aBtr8NaBR6Irf5IIaAOTMppEDgiNJ+xVdvFtyb3nJutA==", "link"=>{"title"=>"google", "url"=>"http://google.fr"}, "commit"=>"Create Link"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.9ms)[0m  [1mINSERT INTO "links" ("title", "url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "google"], ["url", "http://google.fr"], ["created_at", "2015-06-13 11:41:34.978124"], ["updated_at", "2015-06-13 11:41:34.978124"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/links/2
+Completed 302 Found in 11ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/links/2" for 127.0.0.1 at 2015-06-13 13:41:34 +0200
+Processing by LinksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLink Load (0.1ms)[0m  [1mSELECT  "links".* FROM "links" WHERE "links"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered links/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/links" for 127.0.0.1 at 2015-06-13 13:41:36 +0200
+Processing by LinksController#index as HTML
+  [1m[35mLink Load (0.1ms)[0m  SELECT "links".* FROM "links"
+  Rendered links/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 36ms (Views: 35.2ms | ActiveRecord: 0.1ms)
